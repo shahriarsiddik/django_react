@@ -21,7 +21,8 @@ from content_api.views import ContentViewSet
 router = routers.DefaultRouter()
 router.register(r'content_view', ContentViewSet, base_name='content_feed')
 
+
 urlpatterns = [
-    path('^api/',include('router.urls')),
+    path('api/',include(router.urls)),
     path('admin/', admin.site.urls),
 ]
