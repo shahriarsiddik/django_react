@@ -1,4 +1,4 @@
-"""django_with_react URL Configuration
+"""django_app URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from rest_framework import routers
-from content_api.views import ContentViewSet
+from content_api.views import HrEmployeeViewSet
 
 router = routers.DefaultRouter()
-router.register(r'content_view', ContentViewSet, base_name='content_feed')
+router.register('employee', HrEmployeeViewSet, base_name='employee')
 
 
 urlpatterns = [

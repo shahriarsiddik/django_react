@@ -5,4 +5,4 @@ __pycache__
 myvenv
 migrations
 *.sqlite3
-
+node_modules
