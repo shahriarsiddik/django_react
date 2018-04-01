@@ -1,8 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
+class ContentFeed extends React.Component{
+    componentDidMount(){
+        this.getItems();
+    }
+
+    getItems(){
+        fetch('http://localhost:8000/api/employee/')
+            .then(results => results.json())
+            .then(({ results }) => console.log(results));
+    }
+    render(){
+        return null;
+    }
+}
+
+
+ReactDOM.render(
+    <ContentFeed/>,
+    document.getElementById('root')
+)
